@@ -29,7 +29,7 @@ class ArticleController extends Controller
             'mediaURL' => 'required',
             'leadStory' => 'required',
             'content' => 'required',
-            'user_id' => 'required',
+            
         ]);
 
         $article->update([ 
@@ -58,7 +58,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+
     }
 
     /**
