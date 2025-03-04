@@ -68,4 +68,13 @@ class ArticleController extends Controller
     {
         //
     }
+
+    public function search(Request $request, $string)
+    {
+        $articles = Article::where('title', 'like', "%$string%")->get();
+        if($articles->isEmpty()){
+            $articles = Article::where('tags', 'like', "%$string%")->get();
+        }
+        return $articles;
+    }
 }

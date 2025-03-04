@@ -54,4 +54,9 @@ class TagController extends Controller
     {
         //
     }
+
+    public function articles(Tag $tag)
+    {
+        return $tag->articles;
+    }
 }
