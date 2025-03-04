@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import {SERVER_HOST} from "../config/global_constants.jsx"
+import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx"
+// import {useLocation} from "react-router-dom";
 
 function DisplayAllArticles() {
     const [allArticles, setAllArticles] = useState([])
+    // const location = useLocation()
 
     async function getAllArticles() {
-        const data = (await axios.get(`${SERVER_HOST}/api/articles`)).data
+        const data = (await axios.get(`${SERVER_HOST}${GET_ALL_ARTICLES}`)).data
         setAllArticles(data)
     }
 
@@ -23,6 +25,7 @@ function DisplayAllArticles() {
                     <h2>{article.title}</h2>
                     {article.content}
                     <p>{article.created_at}</p>
+                    <img src={article.mediaURL} alt=""/>
                 </div>
             ))}
         </div>
