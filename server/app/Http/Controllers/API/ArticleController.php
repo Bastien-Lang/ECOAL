@@ -20,9 +20,29 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Article $article)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required',
+            'thumbnailURL' => 'required',
+            'mediaType' => 'required',
+            'mediaURL' => 'required',
+            'leadStory' => 'required',
+            'content' => 'required',
+            'user_id' => 'required',
+        ]);
+
+        $article->update([ 
+            'title' => $validated['title'],
+            'thumbnailURL' => $validated['thumbnailURL'],
+            'mediaType' => $validated['mediaType'],
+            'mediaURL' => $validated['mediaURL'],
+            'leadStory' => $validated['leadStory'],
+            'content' => $validated['content'],
+            'user_id' => $validated['user_id'
+
+        ]]
+        );
     }
 
     /**
