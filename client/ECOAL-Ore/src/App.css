@@ -1,10 +1,23 @@
+@font-face {
+  font-family: vanguardMedium;
+  src: url(/fonts/vanguardcf-medium.otf);
+}
+
+@font-face {
+  font-family: vanguardBold;
+  src: url(/fonts/vanguardcf-bold.otf);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+p{
+  font-family: 'vanguardBold';
+  text-transform: uppercase;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
