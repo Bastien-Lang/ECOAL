@@ -4,7 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ArticleController;
 use App\Http\Controllers\API\TagController;
-
 use App\Http\Controllers\AuthController;
 
 /*
@@ -35,5 +34,7 @@ Route::group([
 
 Route::apiResource("articles", ArticleController::class);
 Route::apiResource("tags", TagController::class);
+Route::post('articles', [ArticleController::class, 'store']);
+
 
 
