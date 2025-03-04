@@ -35,5 +35,6 @@ Route::group([
 
 Route::apiResource("articles", ArticleController::class);
 Route::apiResource("tags", TagController::class);
-
+Route::get('/tags/{tag}/articles', [TagController::class, 'articles']);
+Route::get('/articles/search/{string}', [ArticleController::class, 'search']);
 
