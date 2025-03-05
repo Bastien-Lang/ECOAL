@@ -22,6 +22,22 @@ class ArticleController extends Controller
      */
     public function store(Request $request, Article $article)
     {
+
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Article $article)
+    {
+        return $article;
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Article $article)
+    {
         $validated = $request->validate([
             'title' => 'required',
             'thumbnailURL' => 'required',
@@ -43,22 +59,8 @@ class ArticleController extends Controller
 
         ]]
         );
-    }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Article $article)
-    {
         return $article;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Article $article)
-    {
-
     }
 
     /**
@@ -72,9 +74,6 @@ class ArticleController extends Controller
     public function search(Request $request, $string)
     {
         $articles = Article::where('title', 'like', "%$string%")->get();
-        if($articles->isEmpty()){
-            $articles = Article::where('tags', 'like', "%$string%")->get();
-        }
         return $articles;
     }
 }
