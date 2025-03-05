@@ -1,0 +1,65 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbarLogo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbarSearch input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.navbarMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerIcon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mobileMenu.open {
+    display: block;
+}
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobileMenu ul li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .navbarSearch {
+        display: none;
+    }
+
+    .navbarMenu {
+        display: block;
+    }
+}
