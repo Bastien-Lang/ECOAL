@@ -44,7 +44,10 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+        ]);
+        $tag->update($validated);
     }
 
     /**
@@ -52,7 +55,7 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
     }
 
     public function articles(Tag $tag)

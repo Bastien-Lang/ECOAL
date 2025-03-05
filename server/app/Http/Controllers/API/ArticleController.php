@@ -32,17 +32,14 @@ class ArticleController extends Controller
             
         ]);
 
-        $article->update([ 
+        $article = Article::create([
             'title' => $validated['title'],
             'thumbnailURL' => $validated['thumbnailURL'],
             'mediaType' => $validated['mediaType'],
             'mediaURL' => $validated['mediaURL'],
             'leadStory' => $validated['leadStory'],
             'content' => $validated['content'],
-            'user_id' => $validated['user_id'
-
-        ]]
-        );
+        ]);
     }
 
     /**
@@ -58,6 +55,22 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        $validated = $request->validate([
+            'title' => 'required',
+            'thumbnailURL' => 'required',
+            'mediaType' => 'required',
+            'mediaURL' => 'required',
+            'leadStory' => 'required',
+            'content' => 'required',
+        ]);
+        $article->update([
+            'title' => $validated['title'],
+            'thumbnailURL' => $validated['thumbnailURL'],
+            'mediaType' => $validated['mediaType'],
+            'mediaURL' => $validated['mediaURL'],
+            'leadStory' => $validated['leadStory'],
+            'content' => $validated['content'],
+        ]);
 
     }
 
@@ -66,7 +79,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        
     }
 
     public function search(Request $request, $string)
