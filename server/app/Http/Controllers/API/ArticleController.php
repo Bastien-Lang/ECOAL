@@ -20,11 +20,36 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, Article $article)
+    public function store(Request $request)
     {
+        $v =$request->validate([
+            'title' => 'required|string',
+            'content' => 'required|string',
+            'thumbnailURL' => 'required|string',
+            'mediaType' => 'required|string',
+            'mediaURL' => 'required|string',
+            "tags" => 'string'
+        ]);
 
+        $newArticle = Article::create(['title' => $request->input('title'),
+                        'content' => $request->input('content'),
+                        'thumbnailURL' => $request->input('thumbnailURL'),
+                        'mediaType' => $request->input('mediaType'),
+                        'mediaURL' => $request->input('mediaURL'),
+                        'leadStory' => $request->input('leadStory'),
+        ]);
+
+        $tags = explode(",", $request->input("tags"));
+        foreach($tags as $t)  {
+            $t = trim($t);
+            $tag = Tag::where("name", $t)->first();
+            if($tag == false)
+                $tag = Tag::create(["name" => $t]);
+            $newArticle->tags()->attach($tag->id);
+        }
+
+    
     }
-
     /**
      * Display the specified resource.
      */
@@ -38,27 +63,9 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'thumbnailURL' => 'required',
-            'mediaType' => 'required',
-            'mediaURL' => 'required',
-            'leadStory' => 'required',
-            'content' => 'required',
-            
-        ]);
+       
 
-        $article = Article::create([
-            'title' => $validated['title'],
-            'thumbnailURL' => $validated['thumbnailURL'],
-            'mediaType' => $validated['mediaType'],
-            'mediaURL' => $validated['mediaURL'],
-            'leadStory' => $validated['leadStory'],
-            'content' => $validated['content'],
-            'user_id' => $validated['user_id'
-
-        ]]
-        );
+        
 
         return $article;
     }
