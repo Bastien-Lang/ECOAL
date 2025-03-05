@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
 import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx"
+import DisplaySingleArticle from "./DisplaySingleArticle.jsx"
 // import {useLocation} from "react-router-dom";
 
 function DisplayAllArticles() {
@@ -24,12 +25,7 @@ function DisplayAllArticles() {
             <Link to="/">Home</Link>
 
             {allArticles.map((article, index) => (
-                <div key={index}>
-                    <h2>{article.title}</h2>
-                    {article.content}
-                    <p>{article.created_at}</p>
-                    <img src={article.mediaURL} alt=""/>
-                </div>
+                <DisplaySingleArticle key={index} article={article} />
             ))}
         </div>
     )
