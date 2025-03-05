@@ -22,24 +22,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request, Article $article)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'thumbnailURL' => 'required',
-            'mediaType' => 'required',
-            'mediaURL' => 'required',
-            'leadStory' => 'required',
-            'content' => 'required',
-            
-        ]);
 
-        $article = Article::create([
-            'title' => $validated['title'],
-            'thumbnailURL' => $validated['thumbnailURL'],
-            'mediaType' => $validated['mediaType'],
-            'mediaURL' => $validated['mediaURL'],
-            'leadStory' => $validated['leadStory'],
-            'content' => $validated['content'],
-        ]);
     }
 
     /**
@@ -62,16 +45,22 @@ class ArticleController extends Controller
             'mediaURL' => 'required',
             'leadStory' => 'required',
             'content' => 'required',
+            
         ]);
-        $article->update([
+
+        $article = Article::create([
             'title' => $validated['title'],
             'thumbnailURL' => $validated['thumbnailURL'],
             'mediaType' => $validated['mediaType'],
             'mediaURL' => $validated['mediaURL'],
             'leadStory' => $validated['leadStory'],
             'content' => $validated['content'],
-        ]);
+            'user_id' => $validated['user_id'
 
+        ]]
+        );
+
+        return $article;
     }
 
     /**
@@ -85,9 +74,6 @@ class ArticleController extends Controller
     public function search(Request $request, $string)
     {
         $articles = Article::where('title', 'like', "%$string%")->get();
-        if($articles->isEmpty()){
-            $articles = Article::where('tags', 'like', "%$string%")->get();
-        }
         return $articles;
     }
 }
