@@ -11,10 +11,12 @@ function Home() {
 
             <header>
                 <h1>Welcome to E-EXP</h1>
+                
             </header>
 
             <div className="section recent-news">
                 <h2>Recent News</h2>
+                
                 <ul>
                     <li>
                         <h3>Team XYZ Wins International Championship</h3>
