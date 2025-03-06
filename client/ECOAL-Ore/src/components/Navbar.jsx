@@ -15,10 +15,6 @@ const Navbar = () => {
                 <Link to="/">E-XP</Link>
             </div>
 
-            <div className="navbarSearch">
-                <input type="text" placeholder="Search..." />
-            </div>
-
             <div className="navbarMenu" onClick={toggleMenu}>
                 <div className="hamburgerIcon">
                     <div></div>
