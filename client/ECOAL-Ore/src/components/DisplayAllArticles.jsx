@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
-import { SERVER_HOST, ARTICLES } from "../config/global_constants.jsx"
+import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx"
 import DisplaySingleArticle from "./DisplaySingleArticle.jsx"
 // import {useLocation} from "react-router-dom";
 import Navbar from './Navbar.jsx'
@@ -13,7 +13,7 @@ function DisplayAllArticles() {
     // const location = useLocation()
 
     async function getAllArticles() {
-        const data = (await axios.get(`${SERVER_HOST}${ARTICLES}`)).data
+        const data = (await axios.get(`${SERVER_HOST}${GET_ALL_ARTICLES}`)).data
         setAllArticles(data)
         setFilterArticles(data)
     }
@@ -36,12 +36,7 @@ function DisplayAllArticles() {
 
            
             {filterArticles.map((article, index) => (
-                <div key={index}>
-                    <h2>{article.title}</h2>
-                    {article.content}
-                    <p>{article.created_at}</p>
-                    <img src={article.mediaURL} alt=""/>
-                </div>
+                <DisplaySingleArticle key={index} article={article} />
             ))}
         </div>
         

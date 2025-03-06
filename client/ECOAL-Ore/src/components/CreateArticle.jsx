@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { SERVER_HOST, ARTICLES } from "../config/global_constants.jsx";
+import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx";
 
 function CreateArticle() {
     const [articleData, setArticleData] = useState({
@@ -20,7 +20,7 @@ function CreateArticle() {
         e.preventDefault();
 
         // console.log({
-        //     "SUBMIT": `${SERVER_HOST}${ARTICLES}`
+        //     "SUBMIT": `${SERVER_HOST}${GET_ALL_ARTICLES}`
         // })
 
         const formData = new FormData()
@@ -31,7 +31,7 @@ function CreateArticle() {
         formData.append("mediaURL", articleData.mediaURL)
 
         try {
-            const response = await axios.post(`${SERVER_HOST}${ARTICLES}`, formData)
+            const response = await axios.post(`${SERVER_HOST}${GET_ALL_ARTICLES}`, formData)
             console.log("Article created:", response.data);
             // Reset form
             setArticleData({ title: "", content: "", mediaType: "" , mediaURL: "", thumbnailURL: ""});

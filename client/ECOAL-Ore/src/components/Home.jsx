@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <>
-            <Link to="/Articals/">Articals</Link>
+            <Link to="/Articles/">Articles</Link>
 
             <h2>This is Home Page</h2>
         </>
