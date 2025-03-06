@@ -10,7 +10,7 @@ import SignUp from './components/SignUp'
 
 function App() {
   const location = useLocation();
-  const hideNavbarOnRoutes = ['/SingUp', '/test']; 
+  const hideNavbarOnRoutes = ['/login', '/SignUp']; 
   return (
       <>
           {!hideNavbarOnRoutes.includes(location.pathname) && <Navbar />} 
