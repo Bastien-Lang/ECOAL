@@ -6,6 +6,7 @@ import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
 import Login from "./components/Login"
 import SignUp from './components/SignUp' 
+import About from "./components/About"
 
 
 function isAuthenticated() {
@@ -24,6 +25,7 @@ function App() {
               <Route path="/SignUp" element={<SignUp/>} />
               {isAuthenticated() ? <Route path="/test" element= {<h3>Test</h3>} /> : null}
               <Route path="*" element={<p>Page Not Found</p>} />
+              <Route path="/About" element={<About/>} />
           </Routes>
       </>
   )
