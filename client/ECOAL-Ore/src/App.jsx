@@ -8,6 +8,9 @@ import Login from "./components/Login"
 import SignUp from './components/SignUp' 
 
 
+function isAuthenticated() {
+  return document.cookie.includes("access_token")
+}
 function App() {
   const location = useLocation();
   const hideNavbarOnRoutes = ['/Login', '/SignUp']; 
@@ -17,9 +20,10 @@ function App() {
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/Articals/" element={<DisplayAllArticles/>}/>
-              <Route path="/test" element= {<h2>test</h2>}/>
-              <Route path="/Login" element= {<Login/>} />
+              <Route path="/Login" element= {<Login />} />
               <Route path="/SignUp" element={<SignUp/>} />
+              {isAuthenticated() ? <Route path="/test" element= {<h3>Test</h3>} /> : null}
+              <Route path="*" element={<p>Page Not Found</p>} />
           </Routes>
       </>
   )
