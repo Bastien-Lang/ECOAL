@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use App\Models\Tag;
 
 
 class ArticleController extends Controller
@@ -22,7 +23,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    /*
+    
     public function store(Request $request)
     {
         $v =$request->validate([
@@ -39,7 +40,7 @@ class ArticleController extends Controller
                         'thumbnailURL' => $request->input('thumbnailURL'),
                         'mediaType' => $request->input('mediaType'),
                         'mediaURL' => $request->input('mediaURL'),
-                        'leadStory' => $request->input('leadStory'),
+                        'leadStory' => 0,
         ]);
 
         $tags = explode(",", $request->input("tags"));
@@ -93,20 +94,5 @@ class ArticleController extends Controller
         return $articles;
     }
 
-    public function store(Request $request)
-    {
-
-        Article::create([
-            'title' => $request->title,
-            'content' => $request->content1,
-            'thumbnailURL' => $request->thumbnailURL,
-            'mediaType' => $request->mediaType,
-            'mediaURL' => $request->mediaURL,
-            'leadStory' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
-        return response()->json(['message' => 'Article uploaded!' ], 200);
-    }
+   
 }

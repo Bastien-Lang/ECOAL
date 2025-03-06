@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx";
+import { useNavigate } from "react-router-dom";
 
 function CreateArticle() {
+    const navigate = useNavigate()
     const [articleData, setArticleData] = useState({
         title: "",
         content: "",
@@ -19,13 +21,9 @@ function CreateArticle() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // console.log({
-        //     "SUBMIT": `${SERVER_HOST}${GET_ALL_ARTICLES}`
-        // })
-
         const formData = new FormData()
         formData.append("title", articleData.title)
-        formData.append("content1", articleData.content)
+        formData.append("content", articleData.content)
         formData.append("mediaType", articleData.mediaType)
         formData.append("thumbnailURL", articleData.thumbnailURL)
         formData.append("mediaURL", articleData.mediaURL)
@@ -35,6 +33,7 @@ function CreateArticle() {
             console.log("Article created:", response.data);
             // Reset form
             setArticleData({ title: "", content: "", mediaType: "" , mediaURL: "", thumbnailURL: ""});
+            navigate('/')
         } catch (error) {
             console.error("Error creating article:", error);
         }
@@ -93,6 +92,16 @@ function CreateArticle() {
                     <input
                         type="text"
                         name="mediaURL"
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label>Tags:</label>
+                    <input
+                        type="text"
+                        name="tags"
                         onChange={handleInputChange}
                         required
                     />
