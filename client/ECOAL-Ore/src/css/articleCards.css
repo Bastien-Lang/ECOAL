@@ -1,0 +1,99 @@
+/* articleCards.css */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #8B1D6E, #5A166E, #2C0A5E);
+    color: white;
+    padding: 20px 20px 20px;
+}
+
+.headerControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.createButton {
+    padding: 12px 25px;
+    background: #ff1493;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.createButton:hover {
+    background: #ff69b4;
+}
+
+.articlesBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+}
+
+.articleLink {
+    text-decoration: none;
+}
+
+.articleCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.articleCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cardImgHolder {
+    height: 200px;
+    overflow: hidden;
+}
+
+.cardImgHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.articleCard:hover .cardImgHolder img {
+    transform: scale(1.05);
+}
+
+.articleDetails {
+    padding: 20px;
+}
+
+.articleTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+    line-height: 1.4;
+}
+
+.articleTime {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.articlePreview {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .articlesBox {
+        grid-template-columns: 1fr;
+        margin-top: 140px;
+    }
+}
