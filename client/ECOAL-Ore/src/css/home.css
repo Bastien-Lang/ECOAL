@@ -3,7 +3,7 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #6a1b9a, #e91e63);
     color: #000000;
     line-height: 1.6;
     min-height: 100vh;
@@ -85,7 +85,7 @@ header nav a:hover {
 
 .article-card {
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
+    
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -101,4 +101,16 @@ footer {
 
     border-radius: 12px;
     margin-top: 20px;
+}
+
+.recent-news {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.featured-articles {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.upcoming-events {
+    background-color: rgba(255, 255, 255, 0.2);
 }
