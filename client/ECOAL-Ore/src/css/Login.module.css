@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #8B1D6E, #5A166E, #2C0A5E);
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button {
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -5px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #ff69b4;
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.loginLink a {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.loginLink a:hover {
+  color: #ff69b4;
+}
+
+.rememberMe{
+  text-align: left;
+}
+
+.sLogin {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: -5px;
+  text-transform: none;
+}
+
+.checkbox{
+  margin-right: 10px;
+}

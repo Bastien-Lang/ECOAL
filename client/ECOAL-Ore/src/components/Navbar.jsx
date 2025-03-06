@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom'
-import "../css/navbar.css";
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/navbar.css';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,11 +12,8 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             
-            <div className="navbarLogo">Logo
-            
-            </div>
 
-            
+            <div className="navbarLogo">Logo</div>
 
             <div className="navbarMenu" onClick={toggleMenu}>
                 <div className="hamburgerIcon">
@@ -29,9 +25,10 @@ const Navbar = () => {
 
             <div className={`mobileMenu ${isMenuOpen ? "open" : ""}`}>
                 <ul>
-                    <li><button><Link to="/">Home</Link></button></li>
-                    <li>About</li>
-                    <li><button><Link to="/Articels/">Articles</Link></button></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/Articles">Articles</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </div>
         </nav>
