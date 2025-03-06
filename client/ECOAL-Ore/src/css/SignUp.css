@@ -1,4 +1,4 @@
-/* .backDiv{
+ .backDiv{
     background: linear-gradient(to bottom, 
         #8B1D6E,   
         #5A166E,   
@@ -6,7 +6,7 @@
     );
     height: 100vh;
     width: 100vh;
-} */
+} 
 
 * {
     margin: 0;
