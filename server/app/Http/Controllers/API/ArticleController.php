@@ -47,8 +47,7 @@ class ArticleController extends Controller
                 $tag = Tag::create(["name" => $t]);
             $newArticle->tags()->attach($tag->id);
         }
-
-    
+        return $newArticle;
     }
     /**
      * Display the specified resource.
@@ -63,9 +62,16 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-       
+        $validated = $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'thumbnailURL' => 'required',
+            'mediaType' => 'required',
+            'mediaURL' => 'required',
+            'leadStory' => 'required',
+        ]);
+        $article->update($validated);
 
-        
 
         return $article;
     }
@@ -78,7 +84,7 @@ class ArticleController extends Controller
         
     }
 
-    public function search(Request $request, $string)
+    public function search($string)
     {
         $articles = Article::where('title', 'like', "%$string%")->get();
         return $articles;
