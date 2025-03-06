@@ -1,5 +1,7 @@
-input {
+.navbarSearch input {
     position: absolute;
-    top: 6.5vh;
-    left: 140vh
+    top: 2.5vh;
+    left: 15vh;
+    z-index: 2000;
 }
+

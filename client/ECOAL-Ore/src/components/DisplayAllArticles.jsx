@@ -27,7 +27,7 @@ function DisplayAllArticles() {
     return (
         <div>
             <div className="navbarSearch">
-            <SearchBar articles={allArticles} setFilterArticles={setFilterArticles}/>
+            <SearchBar  articles={allArticles} setFilterArticles={setFilterArticles}/>
             </div>
             
             <Link to="/">Home</Link>
