@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
-import '../css/navbar.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/navbar.css';
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <nav className="navbar">
-            <div className="navbarLogo">Logo</div>
+            <div className="navbarLogo">
+                <Link to="/">E-XP</Link>
+            </div>
 
             <div className="navbarSearch">
                 <input type="text" placeholder="Search..." />
@@ -26,13 +29,14 @@ const Navbar = () => {
 
             <div className={`mobileMenu ${isMenuOpen ? "open" : ""}`}>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Articles</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/Articals">Articles</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
