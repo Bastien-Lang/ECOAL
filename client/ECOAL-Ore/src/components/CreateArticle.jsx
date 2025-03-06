@@ -34,7 +34,7 @@ function CreateArticle() {
             console.log("Article created:", response.data);
             // Reset form
             setArticleData({ title: "", content: "", mediaType: "" , mediaURL: "", thumbnailURL: ""});
-            navigate('/')
+            navigate('/Articles')
         } catch (error) {
             console.error("Error creating article:", error);
         }
