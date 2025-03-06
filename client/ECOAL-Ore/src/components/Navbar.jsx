@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/navbar.css';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../css/navbar.css';
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +9,7 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-        setIsMenuOpen(!isMenuOpen);
-    };
+
 
     return (
         <nav className="navbar">
@@ -51,5 +48,5 @@ const Navbar = () => {
         </nav>
 );
 
-
+}
 export default Navbar;
