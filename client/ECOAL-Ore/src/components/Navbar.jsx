@@ -41,6 +41,9 @@ const Navbar = () => {
                     <li>
                         {!isAuthenticated() ? <Link to="/Login" onClick={toggleMenu}>Login</Link> : null}
                     </li>
+                    <li>
+                        {!isAuthenticated() ? <Link to="/SignUp" onClick={toggleMenu}>Register</Link> : null}
+                    </li>
                 </ul>
             </div>
         </nav>

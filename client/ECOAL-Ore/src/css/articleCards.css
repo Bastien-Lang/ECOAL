@@ -50,6 +50,11 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.articleCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
 .cardImgHolder {
     height: 200px;
     overflow: hidden;
