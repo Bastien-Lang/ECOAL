@@ -16,9 +16,9 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbarLogo">
-                <Link to="/">E-XP</Link>
-            </div>
+            
+
+            <div className="navbarLogo">Logo</div>
 
             <div className="navbarSearch">
                 <input type="text" placeholder="Search..." />

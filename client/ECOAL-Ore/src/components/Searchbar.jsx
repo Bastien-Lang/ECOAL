@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { SERVER_HOST, SEARCH_ARTICLES } from "../config/global_constants";
+import "../css/searchbar.css";
 
 const SearchBar = (props) => {
     const [searchQuery, setSearchQuery] = useState("");
