@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/App.css'
 import DisplayAllArticles from './components/DisplayAllArticles.jsx'
+import DisplaySingleArticle from './components/DisplaySingleArticle.jsx'
 import Home from './components/Home.jsx'
 import CreateArticle from './components/CreateArticle.jsx'
 import Article from './components/Article.jsx'
