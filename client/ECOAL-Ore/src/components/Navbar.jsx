@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import "../css/navbar.css";
-import SearchBar from "./Searchbar";
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +13,11 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             
+            <div className="navbarLogo">Logo
+            
+            </div>
 
-            <div className="navbarLogo">Logo</div>
+            
 
             <div className="navbarMenu" onClick={toggleMenu}>
                 <div className="hamburgerIcon">
