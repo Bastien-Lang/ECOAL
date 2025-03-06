@@ -35,33 +35,35 @@ function Login() {
     return (
         <>
             <div className={styles.logo}>
-                <img src="/EXP.png" alt="Logo" />
+                <a href="/"> <img src="../../public/EXP.png" alt="Logo" /></a>
             </div>
 
             <div className={styles.formContainer}>
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.inputGroup}>
-                        <label className={styles.label}>E-mail / Username</label>
+                        <label className={styles.label}></label>
                         <input
                             type="text"
                             className={styles.input}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            placeholder='E-mail / Username'
                             required
                         />
                     </div>
-
+                    
                     <div className={styles.inputGroup}>
-                        <label className={styles.label}>Password</label>
+                        <label className={styles.label}></label>
                         <input
                             type="password"
                             className={styles.input}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder='Password'
                             required
                         />
                     </div>
-
+                    
                     <div className={styles.rememberMe}>
                         <label className={styles.checkboxLabel}>
                             <input
@@ -79,12 +81,11 @@ function Login() {
                     <button type="submit" className={styles.button}>
                         Log In
                     </button>
-
-                    <div className={styles.signupLink}>
-                        <Link to="/SignUp">Sign Up</Link>
-                    </div>
+                    
+                    <p className={styles.sLogin}>Don't have an account? <a href="/SignUp"> Sign Up</a></p>
                 </form>
             </div>
+        
         </>
     );
 }

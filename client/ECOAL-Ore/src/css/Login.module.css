@@ -76,7 +76,7 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: -5px;
   transition: background-color 0.3s;
   width: 100%;
 }
@@ -99,4 +99,19 @@
 
 .loginLink a:hover {
   color: #ff69b4;
+}
+
+.rememberMe{
+  text-align: left;
+}
+
+.sLogin {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: -5px;
+  text-transform: none;
+}
+
+.checkbox{
+  margin-right: 10px;
 }
