@@ -3,22 +3,35 @@
     margin: 0 auto;
     padding: 2rem;
     color: #fff;
+<<<<<<< HEAD
   }
   
   .hero {
+=======
+}
+
+.hero {
+>>>>>>> new
     text-align: center;
     margin-bottom: 3rem;
     padding: 3rem 1rem;
     background: linear-gradient(to right, #8B1D6E, #2C0A5E);
     border-radius: 15px;
+<<<<<<< HEAD
   }
   
   .title {
+=======
+}
+
+.title {
+>>>>>>> new
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
     font-family: 'vanguardBold', sans-serif;
     text-transform: uppercase;
+<<<<<<< HEAD
   }
   
   .subtitle {
@@ -27,11 +40,22 @@
   }
   
   .section {
+=======
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.section {
+>>>>>>> new
     margin-bottom: 3rem;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     position: relative;
+<<<<<<< HEAD
   }
   
   .icon {
@@ -41,17 +65,35 @@
   }
   
   .grid {
+=======
+}
+
+.icon {
+    font-size: 2rem;
+    color: #ff1493;
+    margin-bottom: 1rem;
+}
+
+.grid {
+>>>>>>> new
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
+<<<<<<< HEAD
   }
   
   .card {
+=======
+}
+
+.card {
+>>>>>>> new
     background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+<<<<<<< HEAD
   }
   
   .card:hover {
@@ -60,10 +102,21 @@
   }
   
   .timeline {
+=======
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline {
+>>>>>>> new
     list-style-type: none;
     padding-left: 1.5rem;
     border-left: 2px solid #ff1493;
     margin-top: 1.5rem;
+<<<<<<< HEAD
   }
   
   .timeline li {
@@ -73,6 +126,17 @@
   }
   
   .timeline li:before {
+=======
+}
+
+.timeline li {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.timeline li:before {
+>>>>>>> new
     content: '';
     position: absolute;
     left: -10px;
@@ -81,16 +145,28 @@
     height: 20px;
     border-radius: 50%;
     background: #ff1493;
+<<<<<<< HEAD
   }
   
   .ctaSection {
+=======
+}
+
+.ctaSection {
+>>>>>>> new
     text-align: center;
     padding: 3rem;
     background: linear-gradient(to right, #2C0A5E, #8B1D6E);
     border-radius: 15px;
+<<<<<<< HEAD
   }
   
   .ctaButton {
+=======
+}
+
+.ctaButton {
+>>>>>>> new
     background-color: #ff1493;
     color: white;
     border: none;
@@ -101,6 +177,7 @@
     cursor: pointer;
     margin-top: 1.5rem;
     transition: background-color 0.3s;
+<<<<<<< HEAD
   }
   
   .ctaButton:hover {
@@ -116,3 +193,20 @@
       font-size: 1.8rem;
     }
   }
+=======
+}
+
+.ctaButton:hover {
+    background-color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+>>>>>>> new
