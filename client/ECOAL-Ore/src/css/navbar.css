@@ -5,11 +5,14 @@
     padding: 10px 20px;
     background-color: #333;
     color: white;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbarLogo {
     font-size: 24px;
     font-weight: bold;
+    color: #e91e63;
 }
 
 .navbarSearch input {
@@ -37,21 +40,26 @@
     top: 50px;
     right: 20px;
     background-color: #333;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
+    z-index: 1001;
 }
 
 .mobileMenu.open {
     display: block;
 }
 
-.mobileMenu ul {
-    list-style: none;
-    padding: 0;
+.mobileMenu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
 }
 
-.mobileMenu ul li {
-    margin: 10px 0;
+.mobileMenu a:hover {
+    background-color: #e91e63;
 }
 
 @media (max-width: 768px) {
