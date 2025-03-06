@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
-import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx"
+import { SERVER_HOST, ARTICLES } from "../config/global_constants.jsx"
 // import {useLocation} from "react-router-dom";
 
 function DisplayAllArticles() {
@@ -9,7 +9,7 @@ function DisplayAllArticles() {
     // const location = useLocation()
 
     async function getAllArticles() {
-        const data = (await axios.get(`${SERVER_HOST}${GET_ALL_ARTICLES}`)).data
+        const data = (await axios.get(`${SERVER_HOST}${ARTICLES}`)).data
         setAllArticles(data)
     }
 
@@ -22,6 +22,8 @@ function DisplayAllArticles() {
     return (
         <div>
             <Link to="/">Home</Link>
+
+            <button><Link to="/NewArticle/">Create</Link></button>
 
             {allArticles.map((article, index) => (
                 <div key={index}>

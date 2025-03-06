@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../css/navbar.css'
 
 const Navbar = () => {
@@ -26,9 +27,9 @@ const Navbar = () => {
 
             <div className={`mobileMenu ${isMenuOpen ? "open" : ""}`}>
                 <ul>
-                    <li>Home</li>
+                    <li><button><Link to="/">Home</Link></button></li>
                     <li>About</li>
-                    <li>Articles</li>
+                    <li><button><Link to="/Articels/">Articles</Link></button></li>
                 </ul>
             </div>
         </nav>

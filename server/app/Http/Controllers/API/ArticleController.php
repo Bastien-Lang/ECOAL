@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+
 
 class ArticleController extends Controller
 {
@@ -15,14 +17,6 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
         return $articles;
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request, Article $article)
-    {
-
     }
 
     /**
@@ -45,7 +39,7 @@ class ArticleController extends Controller
             'mediaURL' => 'required',
             'leadStory' => 'required',
             'content' => 'required',
-            
+
         ]);
 
         $article = Article::create([
@@ -57,8 +51,7 @@ class ArticleController extends Controller
             'content' => $validated['content'],
             'user_id' => $validated['user_id'
 
-        ]]
-        );
+        ]]);
 
         return $article;
     }
@@ -68,12 +61,29 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        
+
     }
 
     public function search(Request $request, $string)
     {
         $articles = Article::where('title', 'like', "%$string%")->get();
         return $articles;
+    }
+
+    public function store(Request $request): \Illuminate\Http\JsonResponse
+    {
+
+        Article::create([
+            'title' => $request->title,
+            'content' => $request->content1,
+            'thumbnailURL' => $request->thumbnailURL,
+            'mediaType' => $request->mediaType,
+            'mediaURL' => $request->mediaURL,
+            'leadStory' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return response()->json(['message' => 'Article uploaded!' ], 200);
     }
 }
