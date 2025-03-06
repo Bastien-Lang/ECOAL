@@ -1,9 +1,14 @@
+@font-face {
+    font-family: vanguardMedium;
+    src: url(/fonts/vanguardcf-medium.otf);
+  }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #BD91B1;
     color: white;
     position: relative;
     z-index: 1000;
@@ -47,11 +52,14 @@
     display: none;
     position: absolute;
     top: 50px;
-    right: 20px;
-    background-color: #333;
+    right: 0;
+    background-color: #BD91B1;
     padding: 15px;
     border-radius: 5px;
     z-index: 100;
+    width: 100%;
+    text-align: right;
+    height: 100dvh;
 }
 
 .mobileMenu.open {
@@ -71,12 +79,22 @@
     background-color: #e91e63;
 }
 
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .mobileMenu ul li a {
     color: white;
     text-decoration: none;
     display: block;
     padding: 5px 10px;
     transition: color 0.3s;
+    font-family: 'vanguardMedium';
+    letter-spacing: 1.2px;
+    font-size: 22px;
+    border-bottom: solid 1px white;
 }
 
 .mobileMenu ul li a:hover {
