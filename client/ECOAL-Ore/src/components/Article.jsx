@@ -46,7 +46,7 @@ function Article() {
             <h2>{article.title}</h2>
             <span>{article.content}</span>
             <p>Created at :{formatDate(article.created_at)}</p>
-            <img src={article.mediaURL} alt=""/>
+            <img src={article.mediaURL} alt="" height={100}/>
         </div>
     )
 }

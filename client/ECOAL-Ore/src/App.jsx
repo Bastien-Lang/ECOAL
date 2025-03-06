@@ -23,13 +23,13 @@ function App() {
           <Routes>
               <Route path="/" element=<Home/>/>
               <Route path="/Articles/" element=<DisplayAllArticles />/>
-              <Route path="/articles/:id" element= {<Article />}/>
               <Route path="/NewArticle/" element=<CreateArticle /> />
               <Route path="/Login" element= {<Login />} />
               <Route path="/SignUp" element={<SignUp/>} />
               {isAuthenticated() ? <Route path="/test" element= {<h3>Test</h3>} /> : null}
               <Route path="*" element={<p>Page Not Found</p>} />
               <Route path="/About" element={<About/>} />
+              <Route path="/Articles/:id" element=<DisplaySingleArticle /> />
           </Routes>
       </>
   )

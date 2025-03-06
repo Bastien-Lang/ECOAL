@@ -1,0 +1,68 @@
+/* Add to your existing CSS file */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #8B1D6E, #5A166E, #2C0A5E);
+    color: white;
+    padding: 100px 20px 50px;
+}
+
+.articleContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.articleTitle {
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.articleDetails {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.publishDate {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mediaContainer {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.articleMedia {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.articleContent {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.articleContent p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 80px 15px 40px;
+    }
+
+    .articleContainer {
+        padding: 25px;
+    }
+}
