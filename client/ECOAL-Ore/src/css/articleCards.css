@@ -8,7 +8,7 @@
 
 .headerControls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -30,7 +30,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
     max-width: 1200px;
-    margin: 100px auto 0;
 }
 
 .articleLink {
@@ -94,6 +93,6 @@
 @media (max-width: 768px) {
     .articlesBox {
         grid-template-columns: 1fr;
-        margin-top: 140px;
+        margin-top: 70px;
     }
 }
