@@ -12,7 +12,9 @@ function DisplayAllArticles() {
     const [allArticles, setAllArticles] = useState([])
     const [filterArticles, setFilterArticles] = useState([])
     // const location = useLocation()
-
+    function shortenText(text, length) {
+        return text.length > length ? text.slice(0, length) + "…" : text;
+    }
     async function getAllArticles() {
         const data = (await axios.get(`${SERVER_HOST}${GET_ALL_ARTICLES}`)).data
         setAllArticles(data)
@@ -52,7 +54,7 @@ function DisplayAllArticles() {
                                     })}
                                 </span>
                                 <p className="articlePreview">
-                                    {article.content?.slice(0, 100) + (article.content?.length > 100 ? "..." : "")}
+                                    {shortenText(article.content, 10)}
                                 </p>
                             </div>
                         </div>

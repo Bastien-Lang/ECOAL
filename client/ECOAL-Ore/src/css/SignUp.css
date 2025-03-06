@@ -14,7 +14,7 @@
   box-sizing: border-box;
   }
   
-  body {
+  .centered {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;

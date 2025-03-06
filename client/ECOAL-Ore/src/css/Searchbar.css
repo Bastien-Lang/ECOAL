@@ -1,7 +1,7 @@
 .navbarSearch input {
     position: absolute;
     top: 2vh;
-    left: 14vh;
+    left: 12vh;
     z-index: 2000;
 }
 
