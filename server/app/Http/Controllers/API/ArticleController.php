@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+
 
 class ArticleController extends Controller
 {
@@ -81,12 +83,29 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        
+
     }
 
     public function search($string)
     {
         $articles = Article::where('title', 'like', "%$string%")->get();
         return $articles;
+    }
+
+    public function store(Request $request): \Illuminate\Http\JsonResponse
+    {
+
+        Article::create([
+            'title' => $request->title,
+            'content' => $request->content1,
+            'thumbnailURL' => $request->thumbnailURL,
+            'mediaType' => $request->mediaType,
+            'mediaURL' => $request->mediaURL,
+            'leadStory' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return response()->json(['message' => 'Article uploaded!' ], 200);
     }
 }
