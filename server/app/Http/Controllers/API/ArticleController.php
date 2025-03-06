@@ -22,6 +22,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    /*
     public function store(Request $request)
     {
         $v =$request->validate([
@@ -92,7 +93,7 @@ class ArticleController extends Controller
         return $articles;
     }
 
-    public function store(Request $request): \Illuminate\Http\JsonResponse
+    public function store(Request $request)
     {
 
         Article::create([
