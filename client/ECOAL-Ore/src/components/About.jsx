@@ -4,13 +4,11 @@ import styles from '../css/About.module.css';
 function About() {
   return (
     <div className={styles.container}>
-      {/* Seção Hero */}
       <div className={styles.hero}>
         <h1 className={styles.title}>E-XP: The eSports Revolution</h1>
         <p className={styles.subtitle}>Born from the Flames of Project E-Coal</p>
       </div>
 
-      {/* Linha do Tempo */}
       <div className={styles.section}>
         <FaRocket className={styles.icon} />
         <h2>Our Story</h2>
@@ -21,7 +19,6 @@ function About() {
         </p>
       </div>
 
-      {/* Factos Interessantes */}
       <div className={styles.section}>
         <FaUsers className={styles.icon} />
         <h2>A Equipa dos Sonhos</h2>
@@ -29,8 +26,8 @@ function About() {
           <div className={styles.card}>
             <h3>6 Visionaries</h3>
             <p>
-                Former miners, developers, and pro athletes united by one passion:
-                transforming games into careers
+                Former miners, developers, and pro gamers united by one passion:
+                transforming games into 
             </p>
           </div>
           <div className={styles.card}>
