@@ -1,0 +1,100 @@
+.create-article {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.create-article form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+}
+
+.create-article form div input{
+
+  width: 100%;
+  padding: 15px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.create-article form div input:focus{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.create-article form div textarea {
+
+  width: 100%;
+  padding: 15px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.create-article form div textarea:focus{
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+.create-article form div select {
+
+width: 100%;
+  padding: 15px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: background-color 0.3s;
+  
+}
+
+select option {
+    color: black;
+    
+    
+    }
+
+.create-article button {
+    padding-top: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e91e63;;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+
+}
+
+.create-article button:hover {
+    background-color: #ff69b4;
+}
+
+.create-article form div input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.create-article form div textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Roboto', sans-serif;
+}
+
+.create-article form div select::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}

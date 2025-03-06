@@ -15,7 +15,7 @@ const SignUpPage = () => {
   return (
     <>
       <div className="logo">
-        <img src="/EXP.png" style={{ height: '150%' }} alt="Logo" />
+       <a href="/" ><img src="/EXP.png" style={{ height: '150%' }} alt="Logo" /></a>
       </div>
       <div className="signup-container">
         {/* You can uncomment this if you want the title

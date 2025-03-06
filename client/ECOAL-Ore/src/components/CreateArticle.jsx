@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { SERVER_HOST, GET_ALL_ARTICLES } from "../config/global_constants.jsx";
 import { useNavigate } from "react-router-dom";
+import "../css/createArticle.css";
 
 function CreateArticle() {
     const navigate = useNavigate()
@@ -40,13 +41,14 @@ function CreateArticle() {
     };
 
     return (
-        <div>
+        <div className="create-article">
             <form onSubmit={handleSubmit} noValidate>
                 <div>
-                    <label>Title:</label>
+                    
                     <input
                         type="text"
                         name="title"
+                        placeholder="Enter article title"
                         value={articleData.title}
                         onChange={handleInputChange}
                         required
@@ -54,9 +56,10 @@ function CreateArticle() {
                 </div>
 
                 <div>
-                    <label>Content:</label>
+                    
                     <textarea
                         name="content"
+                        placeholder="Enter article content"
                         value={articleData.content}
                         onChange={handleInputChange}
                         required
@@ -64,9 +67,10 @@ function CreateArticle() {
                 </div>
 
                 <div>
-                    <label>Media Type:</label>
+                    
                     <select
                         name="mediaType"
+                        placeholder="Select media type"
                         value={articleData.mediaType}
                         onChange={handleInputChange}
                         required
@@ -78,30 +82,33 @@ function CreateArticle() {
                 </div>
 
                 <div>
-                    <label>Thumbnail (Cover):</label>
+                    
                     <input
                         type="text"
                         name="thumbnailURL"
+                        placeholder="Enter thumbnail URL"
                         onChange={handleInputChange}
                         required
                     />
                 </div>
 
                 <div>
-                    <label>Media File:</label>
+                    
                     <input
                         type="text"
                         name="mediaURL"
+                        placeholder="Enter media URL"
                         onChange={handleInputChange}
                         required
                     />
                 </div>
 
                 <div>
-                    <label>Tags:</label>
+                    
                     <input
                         type="text"
                         name="tags"
+                        placeholder="Enter tags"
                         onChange={handleInputChange}
                         required
                     />
