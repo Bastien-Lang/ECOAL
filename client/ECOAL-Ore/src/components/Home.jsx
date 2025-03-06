@@ -10,7 +10,8 @@ function Home() {
 
 
             <header>
-                <h1>Welcome to E-EXP</h1>
+                <h1>Welcome to</h1>
+                <img src="/EXP.png" style={{ width: '40%' }} alt="EXP" />
                 
             </header>
 

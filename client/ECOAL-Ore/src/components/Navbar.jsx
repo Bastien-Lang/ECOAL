@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className="navbar">
             
 
-            <div className="navbarLogo">Logo</div>
+            <div className="navbarLogo"><a href="/" ><img src="/EXP.png" style={{ width: '15%' }} alt="Logo" /></a></div>
 
             <div className="navbarMenu" onClick={toggleMenu}>
                 <div className="hamburgerIcon">

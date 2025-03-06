@@ -10,8 +10,11 @@
     padding: 10px 20px;
     background-color: #BD91B1;
     color: white;
-    position: relative;
     z-index: 1000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-bottom: 100px;
 }
 
 .navbarLogo {
