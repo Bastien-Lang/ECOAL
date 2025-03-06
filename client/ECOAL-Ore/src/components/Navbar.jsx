@@ -14,7 +14,10 @@ const Navbar = () => {
             <div className="navbarLogo">Logo</div>
 
             <div className="navbarSearch">
-                <input type="text" placeholder="Search..." />
+                <input
+                    type="text"
+                    placeholder="Search"
+                />
             </div>
 
             <div className="navbarMenu" onClick={toggleMenu}>

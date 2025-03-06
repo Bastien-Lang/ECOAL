@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 
 import './css/App.css'
 
@@ -10,17 +10,17 @@ import Navbar from './components/Navbar.jsx'
 
 function App() {
 
-  return (
-      <>
-          <Navbar />
-          <Routes>
-              <Route path="/" element=<Home/>/>
-              <Route path="/Articels/" element=<DisplayAllArticles />/>
-              <Route path="/NewArticle/" element=<CreateArticle /> />
-              <Route path="/test" element= {<h2>test</h2>}/>
-          </Routes>
-      </>
-  )
+    return (
+        <>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element=<Home/>/>
+                <Route path="/Articels/" element=<DisplayAllArticles/>/>
+                <Route path="/NewArticle/" element=<CreateArticle/> />
+                <Route path="/test" element={<h2>test</h2>}/>
+            </Routes>
+        </>
+    )
 }
 
 export default App

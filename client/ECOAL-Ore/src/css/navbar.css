@@ -5,11 +5,21 @@
     padding: 10px 20px;
     background-color: #333;
     color: white;
+    position: sticky;
+    top: 0px;
 }
 
 .navbarLogo {
     font-size: 24px;
     font-weight: bold;
+    width: 20%;
+    display: flex;
+}
+
+.navbarSearch {
+    width: 60%;
+    display: flex;
+    justify-content: center;
 }
 
 .navbarSearch input {
@@ -20,8 +30,10 @@
 }
 
 .navbarMenu {
-    display: none;
     cursor: pointer;
+    width: 20%;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .hamburgerIcon div {
@@ -52,14 +64,4 @@
 
 .mobileMenu ul li {
     margin: 10px 0;
-}
-
-@media (max-width: 768px) {
-    .navbarSearch {
-        display: none;
-    }
-
-    .navbarMenu {
-        display: block;
-    }
 }
