@@ -9,7 +9,9 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    function isAuthenticated() {
+        return document.cookie.includes("access_token")
+    }
 
     return (
         <nav className="navbar">
@@ -31,13 +33,13 @@ const Navbar = () => {
                         <Link to="/" onClick={toggleMenu}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={toggleMenu}>About</Link>
-                    </li>
-                    <li>
                         <Link to="/articles" onClick={toggleMenu}>Articles</Link>
                     </li>
                     <li>
-                        <Link to="/Login" onClick={toggleMenu}>Login</Link>
+                        <Link to="/about" onClick={toggleMenu}>About</Link>
+                    </li>
+                    <li>
+                        {!isAuthenticated() ? <Link to="/Login" onClick={toggleMenu}>Login</Link> : null}
                     </li>
                 </ul>
             </div>

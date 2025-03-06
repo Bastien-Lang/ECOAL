@@ -24,7 +24,7 @@ function About() {
       {/* Factos Interessantes */}
       <div className={styles.section}>
         <FaUsers className={styles.icon} />
-        <h2>A Equipa dos Sonhos</h2>
+        <h2>The Dream Team</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3>6 Visionaries</h3>
