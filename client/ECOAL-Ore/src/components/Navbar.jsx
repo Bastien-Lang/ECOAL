@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import '../css/navbar.css'
+import React, { useState } from "react";
+import "../css/navbar.css";
+import SearchBar from "./Searchbar";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <nav className="navbar">
-            <div className="navbarLogo">Logo</div>
+            
 
-            <div className="navbarSearch">
-                <input type="text" placeholder="Search..." />
-            </div>
+            <div className="navbarLogo">Logo</div>
 
             <div className="navbarMenu" onClick={toggleMenu}>
                 <div className="hamburgerIcon">
@@ -32,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
