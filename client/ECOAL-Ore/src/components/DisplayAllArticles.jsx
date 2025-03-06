@@ -32,10 +32,17 @@ function DisplayAllArticles() {
             
             <Link to="/">Home</Link>
 
-            {allArticles.map((article, index) => (
-                <DisplaySingleArticle key={index} article={article} />
+           
+            {filterArticles.map((article, index) => (
+                <div key={index}>
+                    <h2>{article.title}</h2>
+                    {article.content}
+                    <p>{article.created_at}</p>
+                    <img src={article.mediaURL} alt=""/>
+                </div>
             ))}
         </div>
+        
     )
 }
 

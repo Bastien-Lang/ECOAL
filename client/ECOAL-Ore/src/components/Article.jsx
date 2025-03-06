@@ -4,7 +4,7 @@ import { GET_SINGLE_ARTICLE } from "../config/global_constants"
 import axios from "axios"
 import { SERVER_HOST } from "../config/global_constants"
 import { useEffect, useState } from "react"
-import { PacmanLoader } from "react-spinner"
+
 
 
 function Article() {
