@@ -15,9 +15,9 @@ function About() {
         <FaRocket className={styles.icon} />
         <h2>Our Story</h2>
         <p>
-            Founded on March 3, 2025 in the heart of Lens, E-XP emerged from a 72-hour
-            hackathon during Project E-Coal. What started as a prototype to cover events
-            for miners-turned-gamers has become the leading eSports platform in Northern Europe
+            Founded on March 3, 2025 in the heart of Lens, E-XP emerged from a week long project
+            during E-Coal #25. What started as a prototype to cover events
+            for gamers has become the leading eSports platform in Northern Europe
         </p>
       </div>
 
